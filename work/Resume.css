@@ -1,0 +1,545 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color:#f7f7e8;
+
+}
+a{
+    text-decoration: none;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows:5px 80px 800px 300px 700px 550px 600px 500px 600px 750px 100px; 
+    grid-template-areas: 
+        "header               header            header"
+        "nav-sec              nav-sec           nav-sec"
+        "gallery-container    gallery-container gallery-container"
+        "intro                intro             intro"
+        "card                 card               card"
+        "stick-img            stick-img          stick-img"
+        "resume               resume             resume"
+        "resume-about         resume-about       resume-about"
+         "name                name               name"
+        "join                 join               join"
+        "footer               footer             footer";
+        
+}
+
+/*first row header*/
+.header{
+    grid-area:header;
+    background-color:#a3d2ca;
+}
+/*end of 1 row header*/
+
+
+/*2 row */
+.nav-sec{
+    grid-area:nav-sec;
+    background-color:#fff;
+    display: grid;
+    grid-template-columns:repeat(3,1fr); 
+    
+}
+.nav-link1{
+    padding: 20px;
+    margin: auto;
+}
+#first-nav, #second-nav{
+    margin: 10px;
+    color:#333;
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+}
+.nav-brand{
+  font-family: 'Abril Fatface', cursive;
+  font-size: 50px;
+    
+}
+.nav-brand:hover{
+    color: #a3d2ca;
+}
+.nav-link2{
+    padding: 20px;
+    margin: auto
+}
+#first-nav:hover, #second-nav:hover{
+    color: #cdd0cb;
+}
+
+
+
+/*end of 2 row r*/
+
+
+/*3row header*/
+.gallery-container{
+    grid-area:gallery-container; 
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows:1fr 1fr;
+}
+
+.wh-1{
+    grid-column:1/2;
+    grid-row:1/3;
+}
+
+.wh-2{
+    grid-column:2/3;
+    grid-row: 1/2;
+}
+
+.wh-3{
+    grid-column:2/3;
+    grid-row: 2/3;
+}
+
+.wh-4{
+    grid-column:3/4;
+    grid-row: 1/3;
+}
+.gallery-item{
+    width:100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+
+}
+.gallery-item .img{
+    width: 100%;
+    height: 100%;
+}
+
+.gallery-item .img img{
+    height: 100%;
+    width: 100%;
+    object-fit:100% 100%;
+    object-position:100%;
+    transition:.4s ease-in-out;
+}
+.gallery-item .img img:hover{
+    transform:scale(1.2);
+}
+ 
+
+/*end of 3 row
+
+/*4 row header*/
+.intro{
+    grid-area:intro;
+    background-color:#a3d2ca; 
+}
+.intro p{
+    font-family:'Sacramento', cursive;
+    padding-top:40px;
+    font-size: 40px;
+    text-align: center;
+}
+#sec-intro{
+   font-family: 'Cinzel', serif;
+    padding-top: 0px;
+    font-size:30px; 
+    font-weight: bold;
+    text-transform: uppercase;
+}
+/*end of 4 row */
+
+/*5 row header*/
+.card{
+    grid-area:card; 
+    background-color:#f7f7e8;
+}
+.card-heading{
+    font-family:monospace;
+    padding: 50px;
+    text-align: center;
+    font-size:30px;
+}
+.card-img{
+    display:grid;
+    grid-template-columns: 20px repeat(3,1fr) 20px;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap:30px; 
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.card {
+     width: 100%;
+    height: 100%;
+    position: relative;
+}
+.whc-1{
+    grid-column:2/3;
+    grid-row: 1/2;
+}
+.whc-2{
+    grid-column:3/4;
+    grid-row: 1/2;
+}
+.whc-3{
+    grid-column:4/5;
+    grid-row: 1/2;
+}
+
+
+.card .img-c{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.card .img-c img{
+    height: 100%;
+    width: 100%;
+    object-fit:100%; 
+    object-position:50%; 
+    
+}
+p.fr{
+    padding-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family:monospace;
+    font-size:25px;
+    font-weight: bold;
+    color: #a3d2ca;
+}
+.frr{
+    text-align: center;
+    font-family:monospace;
+    font-size:16px;
+     color:#222;
+}
+/*end of 5 row */
+
+
+/*6 row header*/
+.stick-img{
+    grid-area:stick-img;
+    background-image: url("https://d.novoresume.com/images/hmx/gradient-cloud.png"), url("https://d.novoresume.com/images/hmx/grey-smoke.png"); /*visual.cv*/
+    background-attachment: fixed;
+    background-size: cover;
+}
+.btn{
+    height:70px;
+    width: 400px;
+    margin: auto;
+    margin-top:250px;
+    overflow: hidden;
+}
+
+a.sign-up{
+ text-align: center;    
+ height:70px;
+ width: 400px;
+ margin:auto;
+ text-decoration: none;
+ color: #ffffff;
+ border: 5px solid #fff;    
+ font-weight:bold;
+ padding:25px;
+ text-transform: uppercase;
+ display:inline-block;
+ transition: all 0.3s ease 0s;
+}
+a.sign-up:hover {
+color: #ffffffff;
+font-weight:bold;
+letter-spacing:5px;
+transition: all 0.3s ease 0s;
+background-color:#222831;
+border: none;    
+}
+
+/*end of 6 row */
+
+
+/*7row header*/
+.resume{
+    grid-area:resume; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.about-img{
+    background-image: url("https://futurepeople.pro/wp-content/uploads/2018/05/resume.jpg");
+    background-size:100% 100%;
+}
+#about-p1{
+    writing-mode:vertical-lr;
+    font-size:16px;
+    letter-spacing:4px;
+    padding: 20px;
+/*    margin: 20px;*/
+    text-transform: uppercase;
+    }
+#about-p1::after{
+    content:"";
+    outline:1px solid #222;    
+}
+.about h1{
+    color: #a3d2ca;
+    text-align:justify;
+    font-size:50px;  
+    padding-left:60px;
+    font-family:'Sacramento', cursive;
+}
+.about-p2{
+    text-align:justify-all;
+    font-size:16px;
+    color:#222831;
+    padding-left:60px;
+    line-height:25px;
+}
+
+.btn2{
+    width:70px;
+    height:70px;      
+    margin: auto;
+    margin-top:30px;
+    overflow: hidden;
+}
+a.about-portfolio {
+    width:70px;
+    height:70px;      
+    margin: auto;
+    display:inline-block;
+    border:4px solid #222831;
+    color: #222831;
+    transition: all .7s ease 0s;
+    border-radius: 50%;
+}
+a.about-portfolio i{
+    position:relative;
+    top:20px;
+    left:25px;
+}
+a.about-portfolio:hover{
+    border: none;
+    color: #fff;
+    background-color:#222831;
+    transition: all .7s ease 0s;
+    font-weight: bold;
+    border-radius:30%;
+}
+/*end of 7 row */
+
+/*8 row header*/
+.resume-about{
+     grid-area:resume-about; 
+     background-color:#a3d2ca; 
+}
+.resume-about P{
+    text-align: center;
+    padding:50px;
+    margin: 50px;
+    font-size:30px;
+    font-family:cinzel;
+    font-weight: bold;
+    letter-spacing: 5px;
+/*    background-color:#a3d2ca;*/
+/*    box-shadow: 5px 5px 50px 5px rgba(0,0,0,.75);*/
+}
+a.btn-3{
+    height:50px;
+    width: 400px;
+    text-align: center;
+    padding:14px;
+    display: inline-block;
+    position: relative;
+    left:35%;
+    text-decoration: none;
+    letter-spacing:3px;
+    color:#222;
+    box-shadow: 5px 5px 50px 5px rgba(0,0,0,.75);
+    transition: all .5s ease-in-out;
+    text-transform: uppercase;
+
+    }
+a.btn-3:hover{
+/*   transition: all .5s ease-in-out;*/
+    border-radius:2px;
+    background-color:#222;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+}
+
+/*end of 8 row */
+
+
+/*9 row header*/
+.name{
+    grid-area:name;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+.overlay{ 
+    grid-column: 1/3;
+    grid-row: 1/2;
+    background-image:linear-gradient(-120deg, rgba(0,0,0,.7) 50%, transparent 50%) ,url("img/top/3rd%20top.jpg");
+    background-attachment: fixed;
+    background-size:100%;
+    position: relative;
+    }
+.overlay h1{
+    position: absolute;
+    top:30%;
+    left:5%;
+    font-size: 50px;
+}
+.overlay P{
+    position: absolute;
+    top:40%;
+    left:5%;
+    line-height:30px;
+    font-size: 20px;
+    font-family: monospace;
+}
+.btn-4{
+    height:40px;
+    width:200px;
+    border: 3px solid #fff;
+    padding-top:7px;
+    position: absolute;
+    top:60%;
+    left:12%;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 3px;
+    color: #fff;
+    transition: all .5s ease-in-out;
+}
+.btn-4:hover{
+    transform: scale(1.1);
+    color: #fff;
+    border: none;
+    background-color: #222;
+    transition: all .5s ease-in-out;
+}
+i.fa.fa-linkedin{
+    font-size:20px;
+    color:cornflowerblue;
+}
+
+/*end of 9 row */
+
+
+
+/*10 row header*/
+.join{
+    grid-area: join;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+/*    background-color:#f8f1f1;*/
+}
+.j-img{
+    grid-column:1/2;
+    grid-row: 1/2;
+}
+.j-img #line{
+    animation:line 2s linear infinite alternate; 
+}
+.j-img #line2,#hair{
+    animation: line2 3s linear infinite alternate;
+}
+.j-img #eyebrow{
+    animation: eyebrow .2s ease-in-out infinite alternate;
+    transform-origin: center;
+}
+@keyframes line{
+    from{
+        transform:translateX(0px);
+    }
+    to{
+        transform:translateX(40px);
+    }
+}
+@keyframes line2{
+    from{
+        transform:translateX(0px);
+    }
+    to{
+        transform:translateX(20px);
+    }
+}
+@keyframes eyebrow{
+    from{
+       transform: rotate(0deg); 
+    }
+    to{
+        transform: rotate(2deg);
+    }
+}
+.content{
+    grid-column:2/3;
+    grid-row: 1/2;
+}
+.content h4{
+    text-align: center;
+    padding: 90px;
+    margin:40px;
+    font-size: 50px;
+    font-family: cinzel;
+    letter-spacing: 3px;
+}
+.content h3{
+    text-align: center;
+    padding: 70px;
+    font-size:25px;
+    letter-spacing: 3px;
+    position: relative;
+    top: -25%;
+    color: #0a043c;
+}
+.j-btn{
+    height:40px;
+    width:300px;
+    border: 3px solid #222;
+    padding:10px;
+    position:relative;
+    top:-30%;
+    left:40%;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 3px;
+    color:#fff;
+    box-shadow:10px 10px 10px 10px rgba(0,0,0,.2);
+    transition: all .5s ease-in-out;
+    border: none;
+    background-color: #1a508b;
+    transition: .4s ease-in-out;
+}
+.j-btn:hover{
+    transition: .4s ease-in-out;
+    border-radius: 20px;
+}
+
+/*11 row header*/
+/*end of 11 row */
+
+
+/*Login*/
+/*12 row header*/
+.footer{
+    grid-area:footer;
+    background-color:#121013;    
+}
+.footer p{
+    color: #fff;
+    text-align: center;
+    margin: 30px;
+    text-transform:capitalize;
+    letter-spacing:4px;
+    font-size: 18px;
+    font-family: cinzel;
+    
+}
+
